@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2024-01-01T00:00:00Z" product-name="mai_canteen">
+        <header/>
+        <body>
+            <trans-unit id="week.nav.previous">
+                <source>Previous week</source>
+                <target>Vorherige Woche</target>
+            </trans-unit>
+            <trans-unit id="week.nav.next">
+                <source>Next week</source>
+                <target>Nächste Woche</target>
+            </trans-unit>
+            <trans-unit id="week.nav.current">
+                <source>Current week</source>
+                <target>Aktuelle Woche</target>
+            </trans-unit>
+            <trans-unit id="week.label">
+                <source>Week</source>
+                <target>Woche</target>
+            </trans-unit>
+            <trans-unit id="week.no_plan">
+                <source>No menu plan available for this week.</source>
+                <target>Für diese Woche ist kein Speiseplan verfügbar.</target>
+            </trans-unit>
+            <trans-unit id="dish.vegetarian">
+                <source>Vegetarian</source>
+                <target>Vegetarisch</target>
+            </trans-unit>
+            <trans-unit id="dish.vegan">
+                <source>Vegan</source>
+                <target>Vegan</target>
+            </trans-unit>
+            <trans-unit id="dish.gluten_free">
+                <source>Gluten-free</source>
+                <target>Glutenfrei</target>
+            </trans-unit>
+            <trans-unit id="dish.allergens">
+                <source>Allergens</source>
+                <target>Allergene</target>
+            </trans-unit>
+            <trans-unit id="dish.additives">
+                <source>Additives</source>
+                <target>Zusatzstoffe</target>
+            </trans-unit>
+            <trans-unit id="dish.price">
+                <source>Price</source>
+                <target>Preis</target>
+            </trans-unit>
+            <trans-unit id="print.title">
+                <source>Weekly Menu Plan</source>
+                <target>Wochenspeiseplan</target>
+            </trans-unit>
+            <trans-unit id="print.week">
+                <source>Week {0}</source>
+                <target>Woche {0}</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

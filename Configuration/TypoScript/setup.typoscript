@@ -1,0 +1,44 @@
+plugin.tx_maicanteen_week {
+    view {
+        templateRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Templates/
+            10 = {$plugin.tx_maicanteen_week.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Partials/
+            10 = {$plugin.tx_maicanteen_week.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Layouts/
+            10 = {$plugin.tx_maicanteen_week.view.layoutRootPath}
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_maicanteen_week.persistence.storagePid}
+    }
+    settings {
+        upcomingLimit = 4
+        showWeekNavigation = 1
+        showTemplate = 0
+    }
+}
+
+plugin.tx_maicanteen_print {
+    view {
+        templateRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Templates/
+            10 = {$plugin.tx_maicanteen_print.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Partials/
+            10 = {$plugin.tx_maicanteen_print.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Layouts/
+            10 = {$plugin.tx_maicanteen_print.view.layoutRootPath}
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_maicanteen_week.persistence.storagePid}
+    }
+}

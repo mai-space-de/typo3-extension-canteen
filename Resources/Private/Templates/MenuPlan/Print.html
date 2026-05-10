@@ -1,0 +1,72 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:section name="main">
+    <div class="mai-canteen mai-canteen--print">
+        <header class="mai-canteen__print-header">
+            <h1 class="mai-canteen__print-title">
+                <f:translate key="print.title" extensionName="mai_canteen"/>
+            </h1>
+            <p class="mai-canteen__print-week">
+                <f:translate key="week.label" extensionName="mai_canteen"/>
+                {currentMonday -> f:format.date(format: 'W')}
+                ({currentMonday -> f:format.date(format: 'd.m.')} – {currentMonday -> f:format.date(format: 'd.m.Y', base: currentMonday.timestamp + 345600)})
+            </p>
+        </header>
+
+        <f:if condition="{menuPlan}">
+            <f:then>
+                <table class="mai-canteen__print-table">
+                    <thead>
+                        <tr>
+                            <f:for each="{weekDays}" as="day" key="dayNumber">
+                                <th class="mai-canteen__print-day-head{f:if(condition: day.isToday, then: ' mai-canteen__print-day-head--today')}">
+                                    <f:translate key="tx_maicanteen_dish.day_of_week.{dayNumber}" extensionName="mai_canteen"/>
+                                    <br/>
+                                    <time datetime="{day.date -> f:format.date(format: 'Y-m-d')}">
+                                        {day.date -> f:format.date(format: 'd.m.')}
+                                    </time>
+                                </th>
+                            </f:for>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <f:for each="{weekDays}" as="day" key="dayNumber">
+                                <td class="mai-canteen__print-day-dishes">
+                                    <f:variable name="dayDishes" value="{menuPlan.dishesByDay.{dayNumber}}"/>
+                                    <f:if condition="{dayDishes}">
+                                        <f:for each="{dayDishes}" as="dish">
+                                            <div class="mai-canteen__print-dish">
+                                                <strong>{dish.title}</strong>
+                                                <f:if condition="{dish.description}">
+                                                    <p>{dish.description}</p>
+                                                </f:if>
+                                                <f:if condition="{dish.price}">
+                                                    <span>{dish.price}</span>
+                                                </f:if>
+                                                <f:if condition="{dish.allergenList}">
+                                                    <small>
+                                                        <f:translate key="dish.allergens" extensionName="mai_canteen"/>:
+                                                        {dish.allergens}
+                                                    </small>
+                                                </f:if>
+                                            </div>
+                                        </f:for>
+                                    </f:if>
+                                </td>
+                            </f:for>
+                        </tr>
+                    </tbody>
+                </table>
+            </f:then>
+            <f:else>
+                <p class="mai-canteen__empty">
+                    <f:translate key="week.no_plan" extensionName="mai_canteen"/>
+                </p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>

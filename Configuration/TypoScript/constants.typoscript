@@ -1,0 +1,18 @@
+plugin.tx_maicanteen_week {
+    view {
+        templateRootPath =
+        partialRootPath =
+        layoutRootPath =
+    }
+    persistence {
+        storagePid =
+    }
+}
+
+plugin.tx_maicanteen_print {
+    view {
+        templateRootPath =
+        partialRootPath =
+        layoutRootPath =
+    }
+}

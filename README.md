@@ -1,40 +1,34 @@
-# maispace/mai-canteen — TYPO3 Extension
-[![PHP](https://img.shields.io/badge/PHP-8.5%2B-blue)](https://www.php.net/)
-[![TYPO3](https://img.shields.io/badge/TYPO3-14.1-orange)](https://typo3.org/)
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+# EXT:mai_canteen
 
 Canteen meal plan records with daily menus, dietary flags, and weekly scheduling.
 
-**Requires:** TYPO3 14.1 · PHP 8.5+
+## Features
 
----
+- **Menu Plan Management** — weekly lunch menu records with per-day dish entries
+- **Allergen Labeling** — configurable allergen and additive flags per dish (comma-separated codes)
+- **Dietary Flags** — vegetarian, vegan, gluten-free indicators per dish
+- **Recurring Cycles** — weekly template records that serve as fallback menus
+- **Frontend Display** — week-based view with week navigation (previous/next)
+- **Print View** — printer-friendly weekly menu table layout
 
 ## Installation
 
-```bash
-composer require maispace/mai-canteen
-```
+Add to your TYPO3 site via the Configuration Set `maispace/mai-canteen` or include the TypoScript manually.
 
----
+## Content Elements
 
-## Development
+| CType | Description |
+|-------|-------------|
+| `maispace_canteen_week` | Weekly interactive menu view with navigation |
+| `maispace_canteen_print` | Printer-friendly weekly menu table |
 
-### Linting
+## Database Tables
 
-```bash
-composer lint:check     # Run all linters
-composer lint:fix       # Fix auto-fixable issues
-```
+| Table | Description |
+|-------|-------------|
+| `tx_maicanteen_menuplan` | Weekly menu plan records |
+| `tx_maicanteen_dish` | Individual dish records (child of MenuPlan) |
 
-### Testing
+## Allergen Codes
 
-```bash
-composer test           # Run all tests
-composer test:unit      # Run unit tests only
-```
-
----
-
-## License
-
-GPL-2.0-or-later — see [LICENSE](../../LICENSE) for details.
+Allergens and additives are stored as comma-separated codes following EU food labeling regulations (e.g. `A,C,G` for wheat, celery, milk).
