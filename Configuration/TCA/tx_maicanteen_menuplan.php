@@ -16,7 +16,7 @@ return (new Table($lang('table.tx_maicanteen_menuplan')))
     ->setSearchFields('title,notes')
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setIconFile('EXT:mai_canteen/Resources/Public/Icons/tx_maicanteen_menuplan.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
     ->setDefaultSorting('ORDER BY week_start ASC')
     ->addColumn(
         'title',

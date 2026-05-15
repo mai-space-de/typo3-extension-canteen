@@ -13,7 +13,7 @@ $lang = Helper::localLangHelperFactory('mai_canteen', 'Default/locallang_tca.xlf
     'MaiCanteen',
     'Week',
     $lang('plugin.week.title'),
-    'ext-maispace-mai_canteen',
+    'mai-content',
     'maispace_feature',
 );
 
@@ -21,11 +21,11 @@ $lang = Helper::localLangHelperFactory('mai_canteen', 'Default/locallang_tca.xlf
     'MaiCanteen',
     'Print',
     $lang('plugin.print.title'),
-    'ext-maispace-mai_canteen',
+    'mai-content',
     'maispace_feature',
 );
 
-(new CType('maispace_canteen_week', $lang('ctype.canteen_week'), 'ext-maispace-mai_canteen'))
+(new CType('maispace_canteen_week', $lang('ctype.canteen_week'), 'mai-content'))
     ->addDefaultHeaderPalette()
     ->addCustomFields('pi_flexform')
     ->addDefaultLanguageTab()
@@ -33,7 +33,7 @@ $lang = Helper::localLangHelperFactory('mai_canteen', 'Default/locallang_tca.xlf
     ->setGroup('maispace_feature')
     ->register();
 
-(new CType('maispace_canteen_print', $lang('ctype.canteen_print'), 'ext-maispace-mai_canteen'))
+(new CType('maispace_canteen_print', $lang('ctype.canteen_print'), 'mai-content'))
     ->addDefaultHeaderPalette()
     ->addCustomFields('pi_flexform')
     ->addDefaultLanguageTab()
