@@ -19,8 +19,7 @@ class MenuPlanController extends AbstractActionController
 
     public function __construct(
         private readonly MenuPlanRepository $menuPlanRepository,
-    ) {
-    }
+    ) {}
 
     public function injectPageRenderer(PageRenderer $pageRenderer): void
     {
@@ -44,8 +43,8 @@ class MenuPlanController extends AbstractActionController
 
         $menuPlan = $this->menuPlanRepository->findByWeekStart($monday);
 
-        if ($menuPlan === null && $settings['showTemplate'] ?? false) {
-            $weekNumber = (int)$monday->format('W');
+        if ($menuPlan === null && ($settings['showTemplate'] ?? false)) {
+            $weekNumber = (int) $monday->format('W');
             $templates = $this->menuPlanRepository->findTemplates()->toArray();
             foreach ($templates as $template) {
                 if ($template->getTemplateWeek() === $weekNumber) {
@@ -56,7 +55,7 @@ class MenuPlanController extends AbstractActionController
         }
 
         $upcomingPlans = $this->menuPlanRepository->findCurrentAndUpcoming(
-            (int)($settings['upcomingLimit'] ?? 4)
+            (int) ($settings['upcomingLimit'] ?? 4),
         );
 
         $this->addJsFile(
@@ -102,7 +101,7 @@ class MenuPlanController extends AbstractActionController
         }
 
         return array_filter(
-            array_map('intval', explode(',', (string)$pages)),
+            array_map('intval', explode(',', (string) $pages)),
             static fn(int $uid): bool => $uid > 0,
         );
     }

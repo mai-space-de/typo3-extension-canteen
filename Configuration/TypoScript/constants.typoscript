@@ -1,18 +1,24 @@
-plugin.tx_maicanteen_week {
+plugin.tx_maicanteen {
     view {
-        templateRootPath =
-        partialRootPath =
-        layoutRootPath =
+        templateRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Templates/
+            10 =
+        }
+        partialRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Partials/
+            10 =
+        }
+        layoutRootPaths {
+            0 = EXT:mai_canteen/Resources/Private/Layouts/
+            10 =
+        }
     }
     persistence {
         storagePid =
     }
-}
-
-plugin.tx_maicanteen_print {
-    view {
-        templateRootPath =
-        partialRootPath =
-        layoutRootPath =
+    settings {
+        upcomingLimit = 4
+        showWeekNavigation = 1
+        showTemplate = 0
     }
 }

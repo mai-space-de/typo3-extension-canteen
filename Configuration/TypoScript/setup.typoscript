@@ -1,44 +1,45 @@
-plugin.tx_maicanteen_week {
-    view {
-        templateRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Templates/
-            10 = {$plugin.tx_maicanteen_week.view.templateRootPath}
+plugin {
+    tx_maicanteen_week {
+        view {
+            templateRootPaths {
+                0 = {$plugin.tx_maicanteen.view.templateRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.templateRootPaths.10}
+            }
+            partialRootPaths {
+                0 = {$plugin.tx_maicanteen.view.partialRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.partialRootPaths.10}
+            }
+            layoutRootPaths {
+                0 = {$plugin.tx_maicanteen.view.layoutRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.layoutRootPaths.10}
+            }
         }
-        partialRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Partials/
-            10 = {$plugin.tx_maicanteen_week.view.partialRootPath}
+        persistence {
+            storagePid = {$plugin.tx_maicanteen.persistence.storagePid}
         }
-        layoutRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Layouts/
-            10 = {$plugin.tx_maicanteen_week.view.layoutRootPath}
-        }
-    }
-    persistence {
-        storagePid = {$plugin.tx_maicanteen_week.persistence.storagePid}
-    }
-    settings {
-        upcomingLimit = 4
-        showWeekNavigation = 1
-        showTemplate = 0
-    }
-}
-
-plugin.tx_maicanteen_print {
-    view {
-        templateRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Templates/
-            10 = {$plugin.tx_maicanteen_print.view.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Partials/
-            10 = {$plugin.tx_maicanteen_print.view.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:mai_canteen/Resources/Private/Layouts/
-            10 = {$plugin.tx_maicanteen_print.view.layoutRootPath}
+        settings {
+            upcomingLimit = {$plugin.tx_maicanteen.settings.upcomingLimit}
+            showWeekNavigation = {$plugin.tx_maicanteen.settings.showWeekNavigation}
+            showTemplate = {$plugin.tx_maicanteen.settings.showTemplate}
         }
     }
-    persistence {
-        storagePid = {$plugin.tx_maicanteen_week.persistence.storagePid}
+    tx_maicanteen_print {
+        view {
+            templateRootPaths {
+                0 = {$plugin.tx_maicanteen.view.templateRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.templateRootPaths.10}
+            }
+            partialRootPaths {
+                0 = {$plugin.tx_maicanteen.view.partialRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.partialRootPaths.10}
+            }
+            layoutRootPaths {
+                0 = {$plugin.tx_maicanteen.view.layoutRootPaths.0}
+                10 = {$plugin.tx_maicanteen.view.layoutRootPaths.10}
+            }
+        }
+        persistence {
+            storagePid = {$plugin.tx_maicanteen.persistence.storagePid}
+        }
     }
 }

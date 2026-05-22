@@ -19,13 +19,13 @@ class MenuPlanRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('weekStart', $weekStart->getTimestamp())
+            $query->equals('weekStart', $weekStart->getTimestamp()),
         );
         $query->setLimit(1);
 
-        $result = $query->execute();
+        $item = $query->execute()->getFirst();
 
-        return $result->getFirst();
+        return $item instanceof MenuPlan ? $item : null;
     }
 
     public function findCurrentAndUpcoming(int $limit = 4): QueryResultInterface
@@ -33,7 +33,7 @@ class MenuPlanRepository extends Repository
         $now = new \DateTimeImmutable('monday this week');
         $query = $this->createQuery();
         $query->matching(
-            $query->greaterThanOrEqual('weekStart', $now->getTimestamp())
+            $query->greaterThanOrEqual('weekStart', $now->getTimestamp()),
         );
         $query->setOrderings(['weekStart' => QueryInterface::ORDER_ASCENDING]);
         $query->setLimit($limit);
@@ -45,7 +45,7 @@ class MenuPlanRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('isTemplate', true)
+            $query->equals('isTemplate', true),
         );
 
         return $query->execute();

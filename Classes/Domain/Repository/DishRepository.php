@@ -19,7 +19,7 @@ class DishRepository extends Repository
     {
         $query = $this->createQuery();
         $query->matching(
-            $query->equals('menuPlan', $menuPlanUid)
+            $query->equals('menuPlan', $menuPlanUid),
         );
 
         return $query->execute();
