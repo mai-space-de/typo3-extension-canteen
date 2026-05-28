@@ -55,6 +55,22 @@
                 <source>Week {0}</source>
                 <target>Woche {0}</target>
             </trans-unit>
+            <trans-unit id="validation.allergens.invalid_type">
+                <source>Allergen codes must be a comma-separated string.</source>
+                <target>Allergencodes müssen als kommagetrennte Zeichenkette angegeben werden.</target>
+            </trans-unit>
+            <trans-unit id="validation.allergens.unknown_codes">
+                <source>Unknown allergen code(s): %s</source>
+                <target>Unbekannte(r) Allergencode(s): %s</target>
+            </trans-unit>
+            <trans-unit id="validation.additives.invalid_type">
+                <source>Additive codes must be a comma-separated string.</source>
+                <target>Zusatzstoffcodes müssen als kommagetrennte Zeichenkette angegeben werden.</target>
+            </trans-unit>
+            <trans-unit id="validation.additives.unknown_codes">
+                <source>Unknown additive code(s): %s</source>
+                <target>Unbekannte(r) Zusatzstoffcode(s): %s</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

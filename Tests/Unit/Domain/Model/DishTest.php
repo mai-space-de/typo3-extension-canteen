@@ -235,6 +235,42 @@ final class DishTest extends TestCase
     }
 
     // -------------------------------------------------------------------------
+    // Tag sanitisation (allergens / additives)
+    // -------------------------------------------------------------------------
+
+    #[Test]
+    public function allergenListUpperCasesAndDeduplicatesCodes(): void
+    {
+        $dish = new Dish();
+        $dish->setAllergens('a, A, c');
+        self::assertSame(['A', 'C'], $dish->getAllergenList());
+    }
+
+    #[Test]
+    public function additiveListPreservesZeroCode(): void
+    {
+        $dish = new Dish();
+        $dish->setAdditives('0, 1, 0');
+        self::assertSame(['0', '1'], $dish->getAdditiveList());
+    }
+
+    #[Test]
+    public function setAllergensStoresCanonicalString(): void
+    {
+        $dish = new Dish();
+        $dish->setAllergens(' a , , <b>a</b> , c ');
+        self::assertSame('A, C', $dish->getAllergens());
+    }
+
+    #[Test]
+    public function setAdditivesStoresCanonicalString(): void
+    {
+        $dish = new Dish();
+        $dish->setAdditives('2,,2, 1');
+        self::assertSame('2, 1', $dish->getAdditives());
+    }
+
+    // -------------------------------------------------------------------------
     // Independent instance isolation
     // -------------------------------------------------------------------------
 

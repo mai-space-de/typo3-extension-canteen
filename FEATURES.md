@@ -5,7 +5,7 @@
 | Feature | Description |
 |---------|-------------|
 | Menu plan management | Weekly lunch menu records with per-day meal entries via `tx_maicanteen_menuplan` |
-| Allergen labeling | Configurable allergen and additive flags per dish (comma-separated EU codes) |
+| Allergen labeling | Configurable allergen and additive flags per dish (comma-separated EU codes); Extbase validators (`AllergenCodeValidator`, `AdditiveCodeValidator`) reject unknown codes on save |
 | Recurring cycles | Support for repeating weekly templates via `is_template` flag and `template_week` ISO week number |
 
 ## Frontend Display

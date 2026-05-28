@@ -42,6 +42,18 @@
             <trans-unit id="print.week">
                 <source>Week {0}</source>
             </trans-unit>
+            <trans-unit id="validation.allergens.invalid_type">
+                <source>Allergen codes must be a comma-separated string.</source>
+            </trans-unit>
+            <trans-unit id="validation.allergens.unknown_codes">
+                <source>Unknown allergen code(s): %s</source>
+            </trans-unit>
+            <trans-unit id="validation.additives.invalid_type">
+                <source>Additive codes must be a comma-separated string.</source>
+            </trans-unit>
+            <trans-unit id="validation.additives.unknown_codes">
+                <source>Unknown additive code(s): %s</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

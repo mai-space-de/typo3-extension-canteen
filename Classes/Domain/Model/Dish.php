@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Maispace\MaiCanteen\Domain\Model;
 
+use Maispace\MaiCanteen\Utility\TagListNormalizer;
+use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 class Dish extends AbstractEntity
@@ -20,8 +22,10 @@ class Dish extends AbstractEntity
 
     protected string $price = '';
 
+    #[Validate(['validator' => 'Maispace\MaiCanteen\Validation\Validator\AllergenCodeValidator'])]
     protected string $allergens = '';
 
+    #[Validate(['validator' => 'Maispace\MaiCanteen\Validation\Validator\AdditiveCodeValidator'])]
     protected string $additives = '';
 
     protected bool $isVegetarian = false;
@@ -97,7 +101,7 @@ class Dish extends AbstractEntity
 
     public function setAllergens(string $allergens): void
     {
-        $this->allergens = $allergens;
+        $this->allergens = TagListNormalizer::toCanonicalString($allergens);
     }
 
     public function getAdditives(): string
@@ -107,7 +111,7 @@ class Dish extends AbstractEntity
 
     public function setAdditives(string $additives): void
     {
-        $this->additives = $additives;
+        $this->additives = TagListNormalizer::toCanonicalString($additives);
     }
 
     public function isIsVegetarian(): bool
@@ -141,26 +145,18 @@ class Dish extends AbstractEntity
     }
 
     /**
-     * @return string[]
+     * @return list<string>
      */
     public function getAllergenList(): array
     {
-        if ($this->allergens === '') {
-            return [];
-        }
-
-        return array_filter(array_map('trim', explode(',', $this->allergens)));
+        return TagListNormalizer::toList($this->allergens);
     }
 
     /**
-     * @return string[]
+     * @return list<string>
      */
     public function getAdditiveList(): array
     {
-        if ($this->additives === '') {
-            return [];
-        }
-
-        return array_filter(array_map('trim', explode(',', $this->additives)));
+        return TagListNormalizer::toList($this->additives);
     }
 }

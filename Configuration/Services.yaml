@@ -7,3 +7,13 @@ services:
   Maispace\MaiCanteen\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  Maispace\MaiCanteen\Validation\Validator\AllergenCodeValidator:
+    tags:
+      - name: typo3/cms/extbase/validator
+        validator: 'Maispace\MaiCanteen\Validation\Validator\AllergenCodeValidator'
+
+  Maispace\MaiCanteen\Validation\Validator\AdditiveCodeValidator:
+    tags:
+      - name: typo3/cms/extbase/validator
+        validator: 'Maispace\MaiCanteen\Validation\Validator\AdditiveCodeValidator'
