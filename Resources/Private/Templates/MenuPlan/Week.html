@@ -85,7 +85,7 @@
                                                         <p class="mai-canteen__dish-allergens">
                                                             <f:translate key="dish.allergens" extensionName="mai_canteen"/>:
                                                             <f:for each="{dish.allergenList}" as="code" iteration="it">
-                                                                <abbr class="mai-canteen__allergen-code" data-canteen-allergen="{code}">{code}</abbr><f:if condition="{it.isLast -> f:boolean.negate()}"><span aria-hidden="true">, </span></f:if>
+                                                                <abbr class="mai-canteen__allergen-code" data-canteen-allergen="{code}">{code}</abbr><f:if condition="!{it.isLast}"><span aria-hidden="true">, </span></f:if>
                                                             </f:for>
                                                         </p>
                                                     </f:if>
