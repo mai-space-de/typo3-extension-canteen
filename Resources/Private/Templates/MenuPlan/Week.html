@@ -2,6 +2,7 @@
     data-namespace-typo3-fluid="true"
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 >
+<f:layout name="Default"/>
 <f:section name="main">
     <div
         class="mai-canteen"
@@ -20,7 +21,7 @@
                 <span class="mai-canteen__nav-week">
                     <f:translate key="week.label" extensionName="mai_canteen"/>
                     {currentMonday -> f:format.date(format: 'W')}
-                    ({currentMonday -> f:format.date(format: 'd.m.')} – {currentMonday -> f:format.date(format: 'd.m.Y', base: currentMonday.timestamp + 345600)})
+                    ({currentMonday -> f:format.date(format: 'd.m.')} – {f:format.date(date: '+4 days', format: 'd.m.Y', base: currentMonday.timestamp)})
                 </span>
 
                 <a
