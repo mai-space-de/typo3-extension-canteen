@@ -19,8 +19,8 @@ Add to your TYPO3 site via the Configuration Set `maispace/mai-canteen` or inclu
 
 | CType | Description |
 |-------|-------------|
-| `maispace_canteen_week` | Weekly interactive menu view with navigation |
-| `maispace_canteen_print` | Printer-friendly weekly menu table |
+| `maicanteen_week` | Weekly interactive menu view with navigation |
+| `maicanteen_print` | Printer-friendly weekly menu table |
 
 ## Database Tables
 
