@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2025-01-01T00:00:00Z" product-name="mai_canteen">
+        <header/>
+        <body>
+            <trans-unit id="table.tx_maicanteen_menuplan">
+                <source>Menu Plan</source>
+                <target>Speiseplan</target>
+            </trans-unit>
+            <trans-unit id="table.tx_maicanteen_dish">
+                <source>Dish</source>
+                <target>Gericht</target>
+            </trans-unit>
+
+            <trans-unit id="tx_maicanteen_menuplan.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.week_start">
+                <source>Week Start (Monday)</source>
+                <target>Wochenbeginn (Montag)</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.week_end">
+                <source>Week End (Friday)</source>
+                <target>Wochenende (Freitag)</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.is_template">
+                <source>Is Template</source>
+                <target>Ist Vorlage</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.template_week">
+                <source>Template Week Number (1–53)</source>
+                <target>Vorlagen-Wochennummer (1–53)</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.notes">
+                <source>Notes</source>
+                <target>Notizen</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_menuplan.dishes">
+                <source>Dishes</source>
+                <target>Gerichte</target>
+            </trans-unit>
+
+            <trans-unit id="tx_maicanteen_dish.menu_plan">
+                <source>Menu Plan</source>
+                <target>Speiseplan</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week">
+                <source>Day of Week</source>
+                <target>Wochentag</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week.1">
+                <source>Monday</source>
+                <target>Montag</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week.2">
+                <source>Tuesday</source>
+                <target>Dienstag</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week.3">
+                <source>Wednesday</source>
+                <target>Mittwoch</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week.4">
+                <source>Thursday</source>
+                <target>Donnerstag</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.day_of_week.5">
+                <source>Friday</source>
+                <target>Freitag</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.title">
+                <source>Dish Name</source>
+                <target>Gerichtname</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.price">
+                <source>Price</source>
+                <target>Preis</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.allergens">
+                <source>Allergens (comma-separated codes)</source>
+                <target>Allergene (kommagetrennte Codes)</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.additives">
+                <source>Additives (comma-separated codes)</source>
+                <target>Zusatzstoffe (kommagetrennte Codes)</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.is_vegetarian">
+                <source>Vegetarian</source>
+                <target>Vegetarisch</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.is_vegan">
+                <source>Vegan</source>
+                <target>Vegan</target>
+            </trans-unit>
+            <trans-unit id="tx_maicanteen_dish.is_gluten_free">
+                <source>Gluten-free</source>
+                <target>Glutenfrei</target>
+            </trans-unit>
+
+            <trans-unit id="palette.week">
+                <source>Week Range</source>
+                <target>Wochenzeitraum</target>
+            </trans-unit>
+            <trans-unit id="palette.template">
+                <source>Template Settings</source>
+                <target>Vorlageneinstellungen</target>
+            </trans-unit>
+            <trans-unit id="palette.dietary">
+                <source>Dietary Flags</source>
+                <target>Ernährungskennzeichnung</target>
+            </trans-unit>
+            <trans-unit id="palette.labeling">
+                <source>Allergens &amp; Additives</source>
+                <target>Allergene &amp; Zusatzstoffe</target>
+            </trans-unit>
+
+            <trans-unit id="tab.template">
+                <source>Template</source>
+                <target>Vorlage</target>
+            </trans-unit>
+            <trans-unit id="tab.labeling">
+                <source>Labeling</source>
+                <target>Kennzeichnung</target>
+            </trans-unit>
+            <trans-unit id="tab.language">
+                <source>Language</source>
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="tab.access">
+                <source>Access</source>
+                <target>Zugriff</target>
+            </trans-unit>
+
+            <trans-unit id="ctype.canteen_week">
+                <source>Canteen: Weekly View</source>
+                <target>Mensa: Wochenansicht</target>
+            </trans-unit>
+            <trans-unit id="ctype.canteen_print">
+                <source>Canteen: Print View</source>
+                <target>Mensa: Druckansicht</target>
+            </trans-unit>
+            <trans-unit id="plugin.week.title">
+                <source>Canteen: Weekly Menu</source>
+                <target>Mensa: Wochenplan</target>
+            </trans-unit>
+            <trans-unit id="plugin.print.title">
+                <source>Canteen: Print Layout</source>
+                <target>Mensa: Drucklayout</target>
+            </trans-unit>
+
+            <trans-unit id="flexform.sheet.general">
+                <source>General</source>
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.pages">
+                <source>Storage Pages</source>
+                <target>Speicherseiten</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.upcomingLimit">
+                <source>Upcoming Weeks Limit</source>
+                <target>Anzahl kommender Wochen</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.showTemplate">
+                <source>Fallback to Template if No Plan Exists</source>
+                <target>Auf Vorlage zurückgreifen, wenn kein Plan existiert</target>
+            </trans-unit>
+            <trans-unit id="flexform.field.showWeekNavigation">
+                <source>Show Week Navigation</source>
+                <target>Wochennavigation anzeigen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
