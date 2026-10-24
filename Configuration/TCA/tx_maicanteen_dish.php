@@ -15,7 +15,7 @@ return (new Table($lang('table.tx_maicanteen_dish')))
     ->setSearchFields('title,description,allergens')
     ->setDefaultConfig()
     ->setLabel('title')
-    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/all-icons/food-kitchenware-serving-dome--cook-tool-dome-kitchen-serving-paltter-dish-tools-food--Streamline-Core.svg')
     ->setDefaultSorting('ORDER BY day_of_week ASC, sort_order ASC')
     ->addColumn(
         'menu_plan',
